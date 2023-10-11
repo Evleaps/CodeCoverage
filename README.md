@@ -1,5 +1,5 @@
 # CodeCoverage
-The code coverage plugin [based on Kotlin Kover from JetBrains](/Users/roman.aimaletdinov/AndroidStudioProjects/CodeCoverage/README.md). This plugin adds a baseline support and the ability to configure your CI.
+The code coverage plugin [based on Kotlin Kover from JetBrains](https://github.com/Kotlin/kotlinx-kover). This plugin adds a baseline support and the ability to configure your CI.
 
 # Description
 If you going to support code coverage check on your CI you can use this plugin.
