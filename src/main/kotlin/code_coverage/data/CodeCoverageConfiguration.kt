@@ -28,13 +28,15 @@ class CodeCoverageConfiguration {
         }
 
     /**
-     * A flavor postfix must be declared. It will be used for run kover tasks
-     * Example: "CapitalDebug"
-     * Result: will be run "koverHtmlReportCapitalDebug"
+     * A flavor postfix must be declared if your app has modules with flavors. It will be used for run kover tasks
+     * Example: "CatDebug"
+     * Result: will be run "koverHtmlReportCatDebug"
      */
     var flavorTaskPostfix: String = ""
         get() {
-            if (field.isBlank()) throw GradleException("Field flavorTaskPostfix must be declared in the coverage configuration")
+            if (field.isBlank() && modulesWithFlavors.isNotEmpty()) {
+                throw GradleException("Field flavorTaskPostfix must be declared in the coverage configuration")
+            }
             return field
         }
 
