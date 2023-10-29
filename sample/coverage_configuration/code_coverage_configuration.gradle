@@ -1,0 +1,11 @@
+apply plugin: "code-coverage-plugin"
+
+codeCoveragePlugin {
+    excludedModules = []
+
+    flavorTaskPostfix = ""
+    modulesWithFlavors = []
+
+    baselineFileName = "code_coverage_baseline"
+    baselinePath = "${project.rootDir}/coverage_configuration/"
+}

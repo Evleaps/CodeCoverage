@@ -1,0 +1,17 @@
+koverReport {
+
+    filters {
+        // note: \$* - exclude сompanion obj, objects and subclasses in objects/sealedClasses
+        excludes {
+            classes(
+                // Android
+                "*Activity*",
+                "*Activity\$*",
+                "*Fragment*",
+                "*Fragment\$*",
+            )
+
+            annotatedBy("*ExcludeFromCoverageReport")
+        }
+    }
+}
