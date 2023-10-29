@@ -1,7 +1,12 @@
 plugins {
     `kotlin-dsl`
+    id("maven-publish")
+    id("java-gradle-plugin")
     kotlin("plugin.serialization") version "1.9.10"
 }
+
+group = "com.romanaimaletdinov.codecoverage"
+version = "1.0.2-RC"
 
 repositories {
     google()

@@ -1,2 +1,2 @@
-include(":code_coverage")
+rootProject.name = "CodeCoverage"
  

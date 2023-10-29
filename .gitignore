@@ -19,3 +19,6 @@ local.properties
 /code_coverage/.gradle/
 /code_coverage/build/
 /code_coverage/build/classes/kotlin/main/
+
+/sample/.gradle/
+/sample/.idea/
