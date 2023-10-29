@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.romanaimaletdinov.codecoverage"
-version = "1.0.4-RC"
+version = "1.0.5-RC"
 
 repositories {
     google()
