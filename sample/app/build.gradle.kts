@@ -4,6 +4,8 @@ plugins {
     id("org.jetbrains.kotlinx.kover")
 }
 
+apply(from = "${project.rootDir}/coverage_configuration/kover_filter.gradle")
+
 android {
     namespace = "com.roman_aimaletdinov.codecoverage"
     compileSdk = 34

@@ -12,8 +12,9 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.github.Evleaps:CodeCoverage:v1.0.4-RC")
+        classpath("com.github.Evleaps:CodeCoverage:v1.0.5-RC")
     }
 }
 
-//apply(plugin = "code-coverage-plugin")
+apply(plugin = "code-coverage-plugin")
+apply(from = "${project.rootDir}/coverage_configuration/code_coverage_configuration.gradle")

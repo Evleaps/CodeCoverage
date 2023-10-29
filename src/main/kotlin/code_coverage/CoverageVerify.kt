@@ -42,7 +42,10 @@ object CoverageVerify {
 
         baselineFile = File(baselinePath, "$baselineFileName.json")
         if (baselineFile?.exists() != true) {
-            System.err.println("Code coverage baseline file wasn't found.")
+            System.err.println(
+                "Code coverage baseline file wasn't found. " +
+                    "Please, execute 'coverageGenerateReport' and then 'coverageBaseline' tasks one by another."
+            )
             baselineFile = null
         }
 

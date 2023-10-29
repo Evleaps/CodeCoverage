@@ -1,0 +1,10 @@
+[
+    {
+        "moduleName": ":analytics",
+        "percentage": 50.0
+    },
+    {
+        "moduleName": ":app",
+        "percentage": 0.0
+    }
+]

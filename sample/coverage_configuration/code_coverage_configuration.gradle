@@ -3,6 +3,7 @@ apply plugin: "code-coverage-plugin"
 codeCoveragePlugin {
     excludedModules = []
 
+    // We have no any flavor this app
     flavorTaskPostfix = ""
     modulesWithFlavors = []
 
