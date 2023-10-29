@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.romanaimaletdinov.codecoverage"
-version = "1.0.2-RC"
+version = "1.0.3-RC"
 
 repositories {
     google()
@@ -24,7 +24,7 @@ gradlePlugin {
 
 dependencies {
     compileOnly(gradleApi())
-    implementation("com.android.tools.build:gradle:8.1.2")
+    implementation("com.android.tools.build:gradle:8.1.1")
     implementation(kotlin("gradle-plugin", "1.9.10"))
 
     implementation(kotlin("serialization", "1.9.10"))
