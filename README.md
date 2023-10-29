@@ -1,11 +1,37 @@
 # CodeCoverage
+[![](https://jitpack.io/v/Evleaps/CodeCoverage.svg)](https://jitpack.io/#Evleaps/CodeCoverage)
+
 The code coverage plugin [based on Kotlin Kover from JetBrains](https://github.com/Kotlin/kotlinx-kover). This plugin adds a baseline support and the ability to configure your CI.
 
-# Description
-If you going to support code coverage check on your CI you can use this plugin.
+# Installation
+Please, note that you must apply [Kover coverage plugin](https://github.com/Kotlin/kotlinx-kover) first. 
+Current plugin extend functionality of the Kover plugin. But this plugin doesn't include one. 
+You have to apply for it by your own hands. 
+
+When you applied for the Kover plugin you can apply for this CodeCoverage plugin.
+You need to add this code to your root build.gradle:
+
+```kotlin
+buildscript {
+  repositories {
+    // ...
+    maven { url = uri("https://jitpack.io") }
+  }
+
+  dependencies {
+    classpath("com.github.Evleaps:CodeCoverage:v1.0.0")
+  }
+}
+
+apply(plugin = "code-coverage-plugin")
+
+```
+
+# New plugin terminal commands
+If you are going to support code coverage check on your CI you can use this plugin.
 This plugin adds new terminal commands to your project:
 
-- `coverageGenerateReport` - this task will execute a test and create a coverage report.
+- `coverageGenerateReport` - this task will execute tests and create coverage reports for any module.
   You can find them here: `build/reports/kover/htmlDebug/index.html`
 - `coverage` - this task will execute tests, generate a coverage report, and
   verify that a module's coverage percent isn't less than a baseline's value.
@@ -17,7 +43,7 @@ codeCoveragePlugin {
     // These modules will be excluded from the coverage report.
     excludedModules = [":design_system"]
 
-    // A flavor postfix must be declared. It will be used for run kover tasks
+    // A flavor postfix must be declared if your app has flavors. It will be used for run kover tasks
     // Example: "HuaweiDebug"
     // Result: will be run "koverHtmlReportHuaweiDebug"
     flavorTaskPostfix = "HuaweiDebug"
