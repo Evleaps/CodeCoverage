@@ -57,6 +57,23 @@ codeCoveragePlugin {
 }
 ```
 
+# Results 
+On the current screen, you can see how the coverage changed in our project for 3 months.
+It is real modules but names were changed. 
+
+- 6 new modules covered by 100%;
+- 4 modules' coverage was increased to 100% by initiative developers;
+- Majority of modules increased their coverage;
+- 2 modules decreased the coverage a bit;
+
+Why decreased?
+- The first case happened because was removed the AB-test code with tests;
+- The second case happened because the team missed that a developer decided to break the rule; 
+
+We can suggest applying the [code ownership](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) to the baseline file and nobody merge the baseline update without an owner approval. 
+
+![img.png](coverage_plugin_results.png)
+
 # Licence
 Copyright (c) 2023 Global, Inc
 
